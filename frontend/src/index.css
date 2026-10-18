@@ -1,0 +1,41 @@
+/* CricStash Base Styling */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #F7F9FC;
+  color: #172033;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Pulse animation for Live Match indicator */
+@keyframes live-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(229, 57, 69, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(229, 57, 69, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(229, 57, 69, 0);
+  }
+}
+
+.live-dot {
+  animation: live-pulse 2s infinite;
+}
+
+/* Pitch Wagon Wheel Canvas Animation */
+.field-canvas {
+  background: radial-gradient(circle, #2d7a48 0%, #1f5632 100%);
+}

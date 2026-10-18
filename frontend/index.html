@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23E53945'/><path d='M30 15 Q50 50 30 85 M70 15 Q50 50 70 85' stroke='white' stroke-width='4' fill='none'/></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CricStash — Live Cricket Scores, Match Centre & Scorecards</title>
+    <meta name="description" content="Follow real-time cricket matches, live ball-by-ball updates, comprehensive scorecards, player statistics, and match insights." />
+
+    <!-- Polyfill for libraries expecting global -->
+    <script>
+      window.global = window;
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cricket: {
+                red: '#E53945',
+                'red-dark': '#C5222E',
+                'red-light': '#FDEBED',
+                navy: '#142B4A',
+                'navy-dark': '#0B182B',
+                'navy-light': '#E8EEF5',
+                blue: '#2563EB',
+                'blue-dark': '#1D4ED8',
+                bg: '#F7F9FC',
+                surface: '#FFFFFF',
+                text: '#172033',
+                muted: '#667085',
+                border: '#E6EAF0',
+                green: '#10B981',
+                amber: '#F59E0B'
+              }
+            },
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif']
+            },
+            boxShadow: {
+              'card': '0 2px 8px -2px rgba(20, 43, 74, 0.05), 0 1px 3px 0 rgba(20, 43, 74, 0.03)',
+              'card-hover': '0 12px 24px -6px rgba(20, 43, 74, 0.08), 0 4px 8px -2px rgba(20, 43, 74, 0.04)',
+              'header': '0 1px 3px 0 rgba(20, 43, 74, 0.04)'
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+        background-color: #F7F9FC;
+        color: #172033;
+        margin: 0;
+        padding: 0;
+        -webkit-font-smoothing: antialiased;
+      }
+      /* Custom scrollbars for ball timelines and tables */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #F1F4F8;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #CBD5E1;
+        border-radius: 9999px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94A3B8;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

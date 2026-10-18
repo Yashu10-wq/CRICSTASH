@@ -1,0 +1,27 @@
+# Ignore environment files containing credentials
+.env
+*.env
+backend/.env
+
+# Build outputs
+target/
+*.class
+*.jar
+*.war
+
+# Maven Wrapper & cache
+.mvn/wrapper/maven-wrapper.jar
+.m2/
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+
+# Logs & temp
+*.log
+scratch/
+tmp/

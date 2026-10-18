@@ -1,0 +1,20 @@
+# Neon Database Credentials & Secrets
+.env
+*.env
+
+# Target build output
+target/
+*.class
+*.jar
+
+# Logs
+*.log
+logs/
+
+# IDE configs
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
